@@ -1,0 +1,15 @@
+#!/bin/bash
+curDir=$PWD
+keyDir=$curDir/keys/
+execDir=$curDir/dist/Debug/GNU-Linux-x86/
+testData="1k 10k 50k 100k 200k 400k 600k 800k 1M"
+exec=mongodb-tester
+
+#make clean
+#make
+for f in $testData
+do
+	cd $execDir
+	time ./$exec -f $keyDir$f
+done
+cd $curDir
