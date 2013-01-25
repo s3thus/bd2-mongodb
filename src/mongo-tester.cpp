@@ -17,7 +17,7 @@ mongo::BSONObjBuilder* deallocBSON(mongo::BSONObjBuilder*);
 
 int main(int argc, char** argv)
 {
-    string filename="keys/1k";
+    string filename="1k";
     stopWatch timer;
     mongo::BSONObjBuilder* bson=NULL;
     int count=0;

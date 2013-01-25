@@ -10,6 +10,7 @@ SRC=src/
 $(exec): $(SRC)mongo-tester.cpp $(SRC)stopWatch.cpp $(SRC)config.cpp
 	mkdir -p $(OUT)
 	g++ $^ $(debug) -O2 $(FLAGS) -o ./$(OUT)/$@
+	cp src/1k $(OUT)
 
 clean:
 	rm -rf dist
